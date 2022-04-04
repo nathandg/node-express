@@ -18,7 +18,12 @@ app.get('/', function (req, res) {
   
 app.post('/', function (req, res) {
 
-    pessoa.push(req.body);    
+    /*temperatura
+    const { temperature } = req.body
+     */
+    const data = req.body;
+    pessoa.push(data);
+    console.log(data);    
     res.status(201).send('Created User');
 
 });
@@ -27,10 +32,10 @@ app.put('/user', function (req, res) {
     res.send('Got a PUT request at /user');
 });
 
-app.delete('/user', function (req, res) {
+app.delete('/', function (req, res) {
     
     for (let i = 0; i < pessoa.length; i++) {
-        pessoa[i] = null;
+        pessoa[i] = 0;
     }
     res.send('Got a DELETE request at /user');
 

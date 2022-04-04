@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server02.js"
+    "start": "nodemon src/aula02.js"
   },
   "keywords": [],
   "author": "",
